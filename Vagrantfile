@@ -40,7 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: 'setup.sh'
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path    = "puppet/manifests"
-    puppet.module_path       = "/etc/puppet/modules"
+    #puppet.module_path       = "/etc/puppet/modules"
     puppet.hiera_config_path = "puppet/hiera/hiera.yaml"
     puppet.working_directory = "/etc/puppet"
     puppet.manifest_file     = "default.pp"
