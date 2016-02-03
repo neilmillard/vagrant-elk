@@ -22,6 +22,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.ssh.forward_agent = true
   config.vm.network "private_network", ip: "192.168.200.201"
+  config.vm.network :forwarded_port, guest: 5601, host: 5601
+  config.vm.network :forwarded_port, guest: 9200, host: 9200
+  config.vm.network :forwarded_port, guest: 9300, host: 9300
 
   # Use a proxy if environment variables are set.
   if ENV['internet_proxy_host']
