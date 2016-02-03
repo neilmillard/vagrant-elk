@@ -43,6 +43,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.module_path       = "/etc/puppet/modules"
     puppet.hiera_config_path = "puppet/hiera/hiera.yaml"
     puppet.working_directory = "/etc/puppet"
-    puppet.manifest_file: "default.pp"
+    puppet.manifest_file     = "default.pp"
   end
 end
